@@ -1,0 +1,18 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "sccs to css",
+            "type": "shell",
+            // ИСПРАВЛЕНИЕ ПУТЕЙ:
+            // `./main.scss` означает "файл main.scss в текущей директории проекта"
+            // `./main.css` означает "файл main.css в текущей директории проекта"
+            "command": "sass ./main.scss ./main.css",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
