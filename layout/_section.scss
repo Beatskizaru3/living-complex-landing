@@ -1,0 +1,10 @@
+.section{
+    &__top{
+        background: linear-gradient(180deg, rgba(32, 45, 69, 0.00) 50%, #202D45 100%),
+                /* Второй градиент: полупрозрачный темный (для всего элемента) */
+                linear-gradient(0deg, rgba(32, 45, 69, 0.50) 0%, rgba(32, 45, 69, 0.50) 100%),
+                /* Ваше фоновое изображение в самом низу */
+                url('/public/index/header.png') center center / cover no-repeat;
+        background-position: 52% 0%;
+    }
+}

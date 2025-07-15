@@ -1,0 +1,30 @@
+@use '../base/variables' as *;
+@use '../base/fonts';
+.navigation{
+
+
+   
+        &__list{
+            display: flex;
+            flex-direction: row;
+            column-gap: 30px;
+            list-style: none;
+
+        
+        }
+
+        &__item{
+
+        }
+
+        &__link{
+            all: unset;
+            font-family: $font3;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+        }
+    }
+
+
+

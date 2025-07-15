@@ -1,0 +1,24 @@
+@use '../base/variables' as *;
+
+.hero{
+
+    h1{
+        color: #E5BF9B;
+        font-family: $font1;
+        font-size: 200px;
+        font-style: italic;
+        font-weight: 400;
+        line-height: normal;
+    }
+    h2{
+        color: $color-white;
+        font-family: $font2;
+        font-size: 120px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    &__title{
+        
+    }
+}
