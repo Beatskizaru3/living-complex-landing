@@ -1,0 +1,125 @@
+@use "../base/variables" as *;
+
+.contacts{
+    h2{
+        color: $color-white;
+        font-family: $font2;
+        font-size: 70px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    &__tops{
+        display: flex;
+        flex-direction: row;
+        column-gap: 80px;
+        &-contact{
+            color: $color-white;
+            font-variant-numeric: lining-nums proportional-nums;
+            font-family: $font2;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            column-gap: 12px;
+
+            &:first-of-type{
+                &::before{
+                    display: block;
+                    content: "";
+                    background-image: url('../public/contacts/phone.svg');
+                    width: 42px;
+                    height: 42px;
+                }
+            }
+            &:nth-of-type(2){
+                &::before{
+                    display: block;
+                    content: "";
+                    background-image: url('../public/contacts/phone.svg');
+                    width: 42px;
+                    height: 42px;
+                }
+            }
+            &:nth-of-type(3){
+                &::before{
+                    display: block;
+                    content: "";
+                    background-image: url('../public/contacts/mail.svg');
+                    width: 42px;
+                    height: 42px;
+                }
+            }
+        }
+        &-row1{
+            display: flex;
+            flex-direction: column;
+            row-gap: 30px;
+            p{
+                margin-top: 0;
+                width: 280px;
+                color: $color-white;
+                font-family: $font3;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 180%; /* 25.2px */
+            }
+        }
+
+        &-row2{
+            display: flex;
+            flex-direction: column;
+            row-gap: 30px;
+            p{
+                margin-top: 0;
+                width: 280px;
+                color: $color-white;
+                font-family: $font3;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 180%; /* 25.2px */
+            }
+        }
+
+        &-row3{
+            display: flex;
+            flex-direction: column;
+            row-gap: 30px;
+            p{
+                margin-top: 0;
+                width: 280px;
+                color: $color-white;
+                font-family: $font3;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 180%; /* 25.2px */
+            }
+        }
+
+        &-row4{
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+            margin-top: 0;
+            margin-bottom: 0;
+            p{
+                display: block;
+                color: $color-accent;
+                text-align: right;
+                font-variant-numeric: lining-nums proportional-nums;
+                font-family: $font2;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 18px; /* 100% */
+                white-space: nowrap;
+            }
+        }
+    }
+}

@@ -1520,3 +1520,151 @@ body {
   width: auto !important;
   line-height: 150%; /* 21px */
 }
+
+.contacts h2 {
+  color: #FFFFFF;
+  font-family: "Montserrat";
+  font-size: 70px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.contacts__tops {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-column-gap: 80px;
+     -moz-column-gap: 80px;
+          column-gap: 80px;
+}
+.contacts__tops-contact {
+  color: #FFFFFF;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 12px;
+     -moz-column-gap: 12px;
+          column-gap: 12px;
+}
+.contacts__tops-contact:first-of-type::before {
+  display: block;
+  content: "";
+  background-image: url("../public/contacts/phone.svg");
+  width: 42px;
+  height: 42px;
+}
+.contacts__tops-contact:nth-of-type(2)::before {
+  display: block;
+  content: "";
+  background-image: url("../public/contacts/phone.svg");
+  width: 42px;
+  height: 42px;
+}
+.contacts__tops-contact:nth-of-type(3)::before {
+  display: block;
+  content: "";
+  background-image: url("../public/contacts/mail.svg");
+  width: 42px;
+  height: 42px;
+}
+.contacts__tops-row1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 30px;
+}
+.contacts__tops-row1 p {
+  margin-top: 0;
+  width: 280px;
+  color: #FFFFFF;
+  font-family: "Inter";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%; /* 25.2px */
+}
+.contacts__tops-row2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 30px;
+}
+.contacts__tops-row2 p {
+  margin-top: 0;
+  width: 280px;
+  color: #FFFFFF;
+  font-family: "Inter";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%; /* 25.2px */
+}
+.contacts__tops-row3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 30px;
+}
+.contacts__tops-row3 p {
+  margin-top: 0;
+  width: 280px;
+  color: #FFFFFF;
+  font-family: "Inter";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%; /* 25.2px */
+}
+.contacts__tops-row4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.contacts__tops-row4 p {
+  display: block;
+  color: #E5BF9B;
+  text-align: right;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px; /* 100% */
+  white-space: nowrap;
+}
