@@ -1,0 +1,24 @@
+.slider{
+    margin-top: 100px;
+    &__inner{
+        display: flex;
+        flex-direction: row;
+        overflow-x: scroll;
+
+        column-gap: 20px;
+         &-img{
+           width: 1120px; /* Заданная ширина */
+           height: 563px; /* Заданная высота */
+           border-radius: 20px; 
+           max-width: none;
+           object-fit: cover;
+           /* УДАЛИТЕ ИЛИ ЗАКОММЕНТИРУЙТЕ object-fit: cover; */
+           /* object-fit: cover; */ 
+           
+           flex-shrink: 0; /* Обязательно, чтобы изображения не сжимались, а сохраняли свои 1120px */
+           
+           /* Добавьте transition для будущих анимаций масштабирования */
+           transition: transform 0.3s ease-out; 
+        }
+    }
+}
