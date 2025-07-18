@@ -1,3 +1,5 @@
+@use '../utils/media' as *;
+
 .slider{
     margin-top: 100px;
     &__inner{
@@ -9,6 +11,14 @@
          &-img{
            width: 1120px; /* Заданная ширина */
            height: 563px; /* Заданная высота */
+           @include tablet{
+            width: 769px;
+            height: 387px;
+           }
+           @include mobile{
+            width: 322px;
+            height: 267px;
+           }
            border-radius: 20px; 
            max-width: none;
            object-fit: cover;

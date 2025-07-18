@@ -1,4 +1,5 @@
 @use '../base/variables' as *;
+@use '../utils/media' as *;
 
 .infrastructure{
     h2{
@@ -8,13 +9,24 @@
         font-style: normal;
         font-weight: 600;
         line-height: normal;
+        @include mobile{
+            font-size: 34px;
+        }
     }
     &__inner {
         width: 100%;
         height: 100%;
         display: grid;
         grid-template-columns: repeat(2, 720px);
+        @include tablet{
+            grid-template-columns: repeat(2, 417px);
+        }
+        @include mobile{
+            display: flex;
+            flex-direction: column;
+        }
         grid-template-rows: repeat(2, 580px);
+       
         grid-column-gap: 0px;
         grid-row-gap: 0px;
 
@@ -38,6 +50,14 @@
             background-size: cover;
             justify-content: end;
             padding-left: 130px;
+            @include tablet{
+                padding-left: 70px;
+            }
+            @include mobile{
+                padding-left: 40px;
+                padding-bottom: 30px;
+                height: 340px;
+            }
             padding-bottom: 77px;
             row-gap: 20px;
             span{

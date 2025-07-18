@@ -31,4 +31,10 @@
 
 body{
     background: $color-bg;
+    overflow-y: scroll;
+}
+
+
+html, body {
+  overflow-x: hidden !important;
 }

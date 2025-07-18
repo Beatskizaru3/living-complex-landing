@@ -1,18 +1,38 @@
 @use "../base/variables" as *;
+@use "../utils/media" as *;
 
 .contacts{
     h2{
         color: $color-white;
         font-family: $font2;
         font-size: 70px;
+        @include mobile{
+            font-size: 34px;
+        }
         font-style: normal;
         font-weight: 600;
         line-height: normal;
     }
     &__tops{
         display: flex;
-        flex-direction: row;
-        column-gap: 80px;
+        justify-content: space-between;
+        @include mobile{
+            flex-direction: column;
+    }
+        &-connect{
+            display: flex;
+            flex-direction: row;
+            column-gap: 80px;
+            row-gap: 35px;
+            @include tablet{
+                column-gap: 40px;
+            }
+            flex-wrap: wrap;
+            @include tablet{
+                max-width: 67%;
+            }
+            
+        }
         &-contact{
             color: $color-white;
             font-variant-numeric: lining-nums proportional-nums;
@@ -53,14 +73,21 @@
                     height: 42px;
                 }
             }
+            &:last-of-type{
+                justify-self: end;
+                @include mobile{
+                    justify-self: normal;
+                }
+            }
         }
         &-row1{
             display: flex;
             flex-direction: column;
             row-gap: 30px;
+            
             p{
                 margin-top: 0;
-                width: 280px;
+                width: 235px;
                 color: $color-white;
                 font-family: $font3;
                 font-size: 14px;
@@ -76,7 +103,7 @@
             row-gap: 30px;
             p{
                 margin-top: 0;
-                width: 280px;
+                width: 235px;
                 color: $color-white;
                 font-family: $font3;
                 font-size: 14px;
@@ -91,8 +118,11 @@
             flex-direction: column;
             row-gap: 30px;
             p{
+                @include mobile{
+                    display: none;
+                }
                 margin-top: 0;
-                width: 280px;
+                width: 235px;
                 color: $color-white;
                 font-family: $font3;
                 font-size: 14px;
@@ -104,8 +134,11 @@
 
         &-row4{
             display: flex;
+            @include mobile{
+                display: none;
+            }
             flex-direction: column;
-            row-gap: 10px;
+            justify-content: space-between;
             margin-top: 0;
             margin-bottom: 0;
             p{
@@ -119,6 +152,74 @@
                 font-weight: 600;
                 line-height: 18px; /* 100% */
                 white-space: nowrap;
+            }
+            &-head{
+                display: flex;
+            
+                flex-direction: column;
+                row-gap: 10px;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            &-mobile{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin-top: 0;
+                margin-bottom: 0;
+            p{
+                display: block;
+                color: $color-accent;
+                text-align: right;
+                font-variant-numeric: lining-nums proportional-nums;
+                font-family: $font2;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 18px; /* 100% */
+                white-space: nowrap;
+            }
+                &-head{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 100%;
+                row-gap: 10px;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            }
+        }
+    }
+    &__office{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        &-left{
+            color: #BCC1C9;
+            font-family: $font3;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 180%;
+            b{
+                color: $color-white;
+            }
+            
+        }
+
+        &-right{
+            button {
+                border: 2px solid $color-white;
+                padding: 18px 30px;
+                color: $color-white;
+                background-color: transparent;
+                font-family: "Montserrat";
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 18px;
             }
         }
     }

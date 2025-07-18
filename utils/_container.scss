@@ -10,7 +10,7 @@
         max-width: 772px;
     }
     @include mobile{
-        max-width: 352px;
+        max-width: 375px;
     }
 }
 
@@ -28,4 +28,29 @@
         max-width: 375px;
     }
 }
+
+.desktop-hidden{
+    @include desktop{
+        display: none;
+    }
+}
+
+.tablet-mobile-hidden{
+    @include tablet{
+        display: none;
+    }
+    @include mobile{
+        display: none;
+    }
+}
+
+.desktop-tablet-hidden{
+    @include desktop{
+        display: none;
+    }
+    @include tablet{
+        display: none;
+    }
+}
+
 

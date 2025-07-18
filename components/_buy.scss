@@ -1,15 +1,25 @@
 @use "../base/variables" as *;
+@use "../utils/media" as *;
 
 .buy{
     display: flex;
     flex-direction: row;
     column-gap: 25px;
     z-index: 1;
+    @include mobile{
+        position: relative;
+    }
     &__info{
         width: 30%;
         display: flex;
         flex-direction: column;
         padding-top: 90px;
+        @include tablet{
+            width: 45%;
+        }
+        @include mobile{
+            width: 100%;
+        }
         h2{
             color: $color-white;
             font-family: $font2;
@@ -17,11 +27,18 @@
             font-style: normal;
             font-weight: 600;
             line-height: normal;
+            @include mobile{
+                font-size: 34px;
+            }
         }
         h3{
             color: $color-white;
             font-family: $font2;
             font-size: 32px;
+            text-wrap: nowrap;
+            @include mobile{
+                font-size: 22px;
+            }
             font-style: normal;
             font-weight: 600;
             line-height: normal;
@@ -58,7 +75,7 @@
         gap: 10px;
         
     }
-    &__step{
+    &__steps{
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -77,13 +94,17 @@
         display: flex;
         flex-direction: row;
         display: flex;
-        
+        margin-top: 50px;
+        @include mobile{
+                flex-direction: column;
+            }
         column-gap: 26px;
         &-body{
             display: flex;
             flex-direction: row;
             align-items: center;
             column-gap: 8px;
+            
             :first-of-type{
                 color: $color-accent;
                 font-feature-settings: 'case' on;
@@ -93,6 +114,7 @@
                 font-weight: 400;
                 line-height: normal;
                 text-transform: uppercase;
+                
             }
             :last-of-type{
                 color: $color-white;
@@ -101,12 +123,17 @@
                 font-style: normal;
                 font-weight: 400;
                 line-height: 150%; /* 21px */
+                text-wrap: nowrap;
             }
         }
     }
 
     button{
         width: fit-content;
+        @include mobile{
+            width:100%;
+            justify-content: center;
+        }
         position: relative;
         display: flex;
         padding: 18px 30px;
@@ -115,6 +142,10 @@
         border: 2px solid $color-accent;
         background-color: transparent;
         margin-top: 55px;
+        @include mobile{
+            margin-top: 140px;
+        }
+
         color: $color-white;
         font-family: $font2;
         font-size: 18px;
@@ -126,6 +157,17 @@
 
     &__img{
         width: 70%;
+        clip-path: inset(0px 0px 0px -9999px); 
+        @include tablet{
+            width: 55%;
+        }
+        @include mobile{
+            width: 188px;
+            position: absolute;
+            right: -20px;
+            bottom: 27px;
+        }
+        
         position: relative;
         
         &-house{
@@ -134,12 +176,19 @@
             width: 780px;
             height: 926px;
             flex-shrink: 0;
+            @include mobile{
+                width: 421px;
+                height: 500px;
+            }
         }
         &::after {
                 position: absolute;
                 bottom: 24px;
                 right: -107px;
-
+                @include mobile{
+                    bottom: -40px;
+                    right: -726px;
+                }
                 display: flex;
                 z-index: 0;
                 content: ' ';
