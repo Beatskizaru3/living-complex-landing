@@ -1,0 +1,36 @@
+@use '../base/variables' as *;
+@use '../base/fonts';
+.navigation{
+
+
+   
+        &__list{
+            display: flex;
+            flex-direction: row;
+            column-gap: 30px;
+            list-style: none;
+
+        
+        }
+
+        &__item{
+
+        }
+
+        &__link{
+            all: unset;
+            color: $color-white;
+            font-family: $font3;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            cursor: pointer;
+            transition: color 0.2s ease-in-out;
+            &:hover{
+                color: $color-accent;
+            }
+        }
+    }
+
+
+

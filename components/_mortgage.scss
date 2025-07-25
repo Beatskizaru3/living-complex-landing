@@ -1,0 +1,287 @@
+@use "../base/variables" as *;
+@use "../utils/media" as *;
+
+.mortgage{
+    color: $color-white;
+    h2{
+        color: $color-white;
+        font-family: $font2;
+        font-size: 70px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        @include mobile{
+            font-size: 34px;
+        }
+    }
+
+    &__options{
+        display: flex;
+        column-gap: 5px;
+        
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+
+  // Прячем скроллбар везде
+  scrollbar-width: none; // Firefox
+  &::-webkit-scrollbar { // Chrome/Safari/Edge
+    display: none;
+  }
+
+  // Если нужно, чтобы элементы не сжимались
+  > * {
+    flex-shrink: 0;
+  }
+    }
+    &__option{
+        &.selected{
+        border: 2px solid $color-accent;    
+        }
+        white-space: nowrap;
+        border: 2px solid rgba(255, 255, 255, 0.10);
+        padding: 18px 30px;
+        color: $color-white;
+        font-family: $font2;
+        font-size: 18px;
+        @include mobile{
+            font-size: 14px;
+            padding: 18px 20px;
+        }
+        font-style: normal;
+        font-weight: 600;
+        line-height: 18px; /* 100% */
+        cursor: pointer;
+        transition: border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+        &:hover{
+            border-color: $color-accent;
+            background-color: $color-gray;
+        }
+    }
+
+    &__advant{
+        &-block{
+            display: flex;
+            flex-direction: row;
+            column-gap: 95px;
+            @include mobile{
+                flex-direction: column;
+            }
+        }
+        &-info{
+            display: flex;
+            flex-direction: column;
+            
+            max-width: 380px;
+            row-gap: 10px;
+
+            h3{
+                color: $color-white;
+                font-family: $font2;
+                font-size: 32px;
+                @include mobile{
+                    font-size: 22px;
+                }
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                margin-top: 1.15rem;
+                margin-bottom: 0;
+            }
+            p{
+                color: $color-gray;
+                font-family: $font3;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 180%; /* 25.2px */
+            }
+        }
+    }
+
+    &__partners{
+        overflow-x: auto;
+  -webkit-overflow-scrolling: touch; // для плавности на iOS
+  scroll-behavior: smooth;
+
+  // Скрываем скроллбар
+  scrollbar-width: none; // Firefox
+  &::-webkit-scrollbar {
+    display: none; // Chrome/Safari
+  }
+
+        h3{
+            color: $color-white;
+            font-family: $font2;
+            font-size: 32px;
+            @include mobile{
+                font-size: 22px;
+            }
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            margin-top: 1.15rem;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__lead{
+        color: $color-accent;
+        text-align: right;
+        font-family: $font3;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 180%; /* 25.2px */
+        text-wrap: nowrap;
+        cursor: pointer;
+    }
+    table{
+        border: none;
+        font-family: $font3;
+        
+    }
+    tr{
+        &:first-of-type{
+                border-bottom: 1px solid $color-accent;
+        }
+        &:nth-of-type(2){
+            margin-top: 1px;
+        }
+    
+        }
+    
+    th{
+        text-align: left;
+        color: #727B8C;
+        font-family: $font3;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%; /* 18.2px */
+        
+                
+                padding-right: 20px;
+            
+        
+    }
+    td{
+        text-align: left;
+        padding-top: 23px;
+        padding-bottom: 23px;
+        @include tablet{
+            
+            &:nth-of-type(3){
+                text-wrap: nowrap;
+                padding-right: 20px;
+            }
+        }
+        &.alpha{
+            display: inline-flex;
+            justify-content: start;
+            align-items: center;
+            &::before{
+                padding-right: 10px;
+                width: 40px;
+                height: 40px;
+                content: "";
+                background-repeat: no-repeat;
+                background-image: url('./public/mortgage/alpha.svg');
+            }
+        }
+        &.sber{
+            display: inline-flex;
+            justify-content: start;
+            align-items: center;
+            &::before{
+                padding-right: 10px;
+                width: 40px;
+                height: 40px;
+                content: "";
+                background-repeat: no-repeat;
+                background-image: url('./public/mortgage/sber.svg');
+            }
+        }
+        &.asia{
+            display: inline-flex;
+            justify-content: start;
+            align-items: center;
+            &::before{
+                padding-right: 10px;
+                width: 40px;
+                height: 40px;
+                content: "";
+                background-repeat: no-repeat;
+                background-image: url('./public/mortgage/azia.svg');
+            }
+        }
+        &.wide{
+            display: inline-flex;
+            justify-content: start;
+            align-items: center;
+            &::before{
+                padding-right: 10px;
+                width: 40px;
+                height: 40px;
+                content: "";
+                background-repeat: no-repeat;
+                background-image: url('./public/mortgage/otp.svg');
+            }
+        }
+        
+        
+    }
+    th,td {
+        width: 200px;
+        &:first-of-type{
+            width: 300px;
+            @include tablet{
+                width: 215px;
+            }
+        }
+        
+        
+
+    
+    }
+    &__contact{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        column-gap: 16px;
+        @include mobile{
+            flex-direction: column;
+        }
+        button {
+            @include mobile{
+                width: 100%;
+            }
+            border: 2px solid $color-white;
+            padding: 18px 30px;
+            color: $color-white;
+            background-color: transparent;
+            font-family: "Montserrat";
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 18px;
+             transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+             cursor: pointer;
+            &:hover{
+                color: $color-accent;
+                background-color: $color-white;
+            }
+}
+        p{
+            color: $color-white;
+            font-family: $font3;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1.6;
+            @include mobile{
+                text-align: center;
+            }
+        }
+    }
+}

@@ -1,0 +1,56 @@
+@use './media' as *;
+
+.container{ 
+    margin-left: auto;
+    margin-right: auto;
+    @include desktop{
+        max-width: 1180px;
+    }
+    @include tablet{
+        max-width: 772px;
+    }
+    @include mobile{
+        max-width: 375px;
+    }
+}
+
+.container-full{
+    margin-left: auto;
+    margin-right: auto;
+
+    @include desktop{
+        max-width: 1440px;
+    }
+    @include tablet{
+        max-width: 840px;
+    }
+    @include mobile{
+        max-width: 375px;
+    }
+}
+
+.desktop-hidden{
+    @include desktop{
+        display: none;
+    }
+}
+
+.tablet-mobile-hidden{
+    @include tablet{
+        display: none;
+    }
+    @include mobile{
+        display: none;
+    }
+}
+
+.desktop-tablet-hidden{
+    @include desktop{
+        display: none;
+    }
+    @include tablet{
+        display: none;
+    }
+}
+
+

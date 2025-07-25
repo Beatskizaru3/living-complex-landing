@@ -1,0 +1,2016 @@
+@charset "UTF-8";
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type=search] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
+}
+
+.header {
+  position: relative;
+  z-index: 10;
+  padding-top: 23px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__title {
+  display: flex;
+  flex-direction: row;
+  column-gap: 24px;
+}
+.header__call {
+  display: flex;
+  flex-direction: row;
+  column-gap: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+}
+.header__call a {
+  all: unset;
+  color: #FFFFFF;
+}
+@media (min-width: 375px) and (max-width: 839px) {
+  .header__call a {
+    display: none;
+  }
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1180px;
+  }
+}
+@media (min-width: 840px) and (max-width: 1439px) {
+  .container {
+    max-width: 772px;
+  }
+}
+@media (min-width: 375px) and (max-width: 839px) {
+  .container {
+    max-width: 375px;
+  }
+}
+
+.container-full {
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 1440px) {
+  .container-full {
+    max-width: 1440px;
+  }
+}
+@media (min-width: 840px) and (max-width: 1439px) {
+  .container-full {
+    max-width: 840px;
+  }
+}
+@media (min-width: 375px) and (max-width: 839px) {
+  .container-full {
+    max-width: 375px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .desktop-hidden {
+    display: none;
+  }
+}
+
+@media (min-width: 840px) and (max-width: 1439px) {
+  .tablet-mobile-hidden {
+    display: none;
+  }
+}
+@media (min-width: 375px) and (max-width: 839px) {
+  .tablet-mobile-hidden {
+    display: none;
+  }
+}
+
+@media (min-width: 1440px) {
+  .desktop-tablet-hidden {
+    display: none;
+  }
+}
+@media (min-width: 840px) and (max-width: 1439px) {
+  .desktop-tablet-hidden {
+    display: none;
+  }
+}
+
+.footer {
+  margin-bottom: 73px;
+  position: relative;
+  z-index: 10;
+  padding-top: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__title {
+  display: flex;
+  flex-direction: row;
+  column-gap: 24px;
+}
+.footer__call {
+  display: flex;
+  flex-direction: row;
+  column-gap: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+}
+.footer__call a {
+  all: unset;
+  color: #FFFFFF;
+}
+@media (min-width: 375px) and (max-width: 839px) {
+  .footer__call a {
+    display: none;
+  }
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  font-style: italic;
+  font-weight: 400;
+  src: url("./fonts/PlayfairDisplay-Italic.woff2") format("woff2");
+}
+@font-face {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 700;
+  src: url("./fonts/Montserrat-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  src: url("./fonts/Montserrat-SemiBold.woff2") format("woff2");
+}
+@font-face {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  src: url("./fonts/Montserrat-Medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/Montserrat-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/Inter18pt-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  src: url("./fonts/Inter18pt-Medium.woff2") format("woff2");
+}
+.navigation__list {
+  display: flex;
+  flex-direction: row;
+  column-gap: 30px;
+  list-style: none;
+}
+.navigation__link {
+  all: unset;
+  color: #FFFFFF;
+  font-family: "Inter";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+.navigation__link:hover {
+  color: #E5BF9B;
+}
+
+.section__top {
+  position: relative;
+  /* Важно: убедитесь, что у .section__top есть достаточная высота,
+     например, min-height: 100vh; или явная height.
+     Без этого, если внутри нет контента, элемент может быть 0px в высоту,
+     и фон не будет виден. */
+  background: linear-gradient(180deg, rgba(32, 45, 69, 0) 50%, #202D45 100%), linear-gradient(0deg, rgba(32, 45, 69, 0.5) 0%, rgba(32, 45, 69, 0.5) 100%), url("./public/index/header.png") lightgray 47% 4% no-repeat;
+}
+
+body {
+  background: #202D45;
+  overflow-y: scroll;
+}
+
+html, body {
+  overflow-x: hidden !important;
+}
+
+.hero {
+  position: relative;
+  z-index: 10;
+  padding-bottom: 200px;
+}
+@media (min-width: 840px) and (max-width: 1439px) {
+  .hero {
+    padding-bottom: 70px;
+  }
+}
+@media (min-width: 375px) and (max-width: 839px) {
+  .hero {
+    padding-bottom: 50px;
+  }
+}
+.hero h1 {
+  color: #E5BF9B;
+  font-family: "Playfair Display";
+  font-size: 200px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 0.01em;
+  margin-top: 0.85em;
+  line-height: 1;
+  padding-bottom: 0;
+}
+@media (min-width: 840px) and (max-width: 1439px) {
+  .hero h1 {
+    font-size: 140px;
+  }
+}
+@media (min-width: 375px) and (max-width: 839px) {
+  .hero h1 {
+    font-size: 90px;
+  }
+}
+.hero h2 {
+  color: #FFFFFF;
+  font-family: "Montserrat";
+  font-size: 120px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 0.01em;
+  margin-bottom: 0.35em;
+  padding-bottom: 0;
+}
+@media (min-width: 840px) and (max-width: 1439px) {
+  .hero h2 {
+    font-size: 80px;
+  }
+}
+@media (min-width: 375px) and (max-width: 839px) {
+  .hero h2 {
+    font-size: 40px;
+  }
+}
+.hero__description {
+  max-width: 100%;
+  color: #FFF;
+  font-family: "Inter";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%; /* 25.2px */
+}
+@media (min-width: 840px) and (max-width: 1439px) {
+  .hero__description {
+    max-width: 462px;
+  }
+}
+@media (min-width: 375px) and (max-width: 839px) {
+  .hero__description {
+    font-size: 13px;
+  }
+}
+.hero button {
+  border: 2px solid #FFFFFF;
+  padding: 18px 30px;
+  color: #FFFFFF;
+  background-color: transparent;
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+.hero__advantages {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 50px;
+}
+@media (min-width: 840px) and (max-width: 1439px) {
+  .hero__advantages {
+    max-width: 61%;
+  }
+}
+@media (min-width: 375px) and (max-width: 839px) {
+  .hero__advantages {
+    column-gap: 22px;
+    justify-items: center;
+  }
+}
+@media (min-width: 1440px) {
+  .hero__advantages-block {
+    width: auto;
+  }
+}
+@media (min-width: 840px) and (max-width: 1439px) {
+  .hero__advantages-block {
+    width: 210px;
+  }
+}
+@media (min-width: 375px) and (max-width: 839px) {
+  .hero__advantages-block {
+    width: 165px;
+  }
+  .hero__advantages-block:last-of-type {
+    width: 200px;
+    margin: auto;
+  }
+}
+.hero__advantages-block-stat {
+  flex-wrap: nowrap;
+}
+.hero__advantages-block-stat-number {
+  color: #E5BF9B;
+  font-family: "Playfair Display";
+  font-size: 60px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+}
+.hero__advantages-block-stat-slash {
+  color: #949AA5;
+  font-feature-settings: "case" on;
+  font-family: "Playfair Display";
+  font-size: 60px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+  opacity: 0.2;
+}
+.hero__advantages-block-stat-measurment {
+  color: #FFFFFF;
+  font-feature-settings: "case" on;
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px; /* 100% */
+}
+.hero__advantages-block-description {
+  color: #949AA5;
+  font-family: "Inter";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 21px */
+  text-align: center;
+}
+
+.advant h2 {
+  color: #FFFFFF;
+  font-family: "Montserrat";
+  font-size: 70px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 70px;
+}
+@media (min-width: 375px) and (max-width: 839px) {
+  .advant h2 {
+    font-size: 34px;
+    margin-bottom: 35px;
+  }
+}
+.advant__scroll {
+  display: grid;
+  grid-template-columns: min-content min-content min-content min-content min-content;
+  grid-template-rows: repeat(2, auto);
+  gap: 8px;
+  overflow-x: visible;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+.advant__scroll-cell {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+}
+.advant__scroll-cell-body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 15px;
+}
+.advant__scroll-cell-number {
+  color: #E5BF9B;
+  font-feature-settings: "case" on;
+  font-family: "Playfair Display";
+  font-size: 48px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+}
+@media (min-width: 375px) and (max-width: 839px) {
+  .advant__scroll-cell-number {
+    font-size: 41px;
+  }
+}
+.advant__scroll-cell-description {
+  color: #FFFFFF;
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+@media (min-width: 375px) and (max-width: 839px) {
+  .advant__scroll-cell-description {
+    font-size: 15px;
+  }
+}
+.advant__scroll-cell-small {
+  width: 280px;
+  height: 228px;
+  border-radius: 20px;
+}
+.advant__scroll-cell-large {
+  width: 538px;
+  height: 552px;
+  border-radius: 20px;
+}
+.advant__scroll-div2 {
+  grid-column-start: 1;
+  grid-row-start: 2;
+}
+.advant__scroll-div3 {
+  grid-column-start: 2;
+  grid-row-start: 1;
+}
+.advant__scroll-div4 {
+  grid-column-start: 2;
+  grid-row-start: 2;
+}
+.advant__scroll-div6 {
+  grid-column: span 2/span 2;
+  grid-row: span 2/span 2;
+  grid-column-start: 3;
+  grid-row-start: 1;
+}
+.advant__scroll-div9 {
+  grid-column-start: 5;
+  grid-row-start: 1;
+}
+.advant__scroll-div10 {
+  grid-column-start: 5;
+  grid-row-start: 2;
+}
+
+.slider__inner.no-item-transition .slider__inner-item {
+  transition: none !important; /* Отключаем все переходы на элементах, если контейнер имеет этот класс */
+}
+
+.slider__inner {
+  user-select: none;
+}
+
+.slider {
+  margin-top: 100px;
+  overflow: hidden;
+}
+.slider__inner {
+  display: flex;
+  column-gap: 20px;
+  column-gap: 20px;
+  transition: transform 0.3s ease-out;
+}
+.slider__inner-item {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1120px;
+  height: 563px;
+  border-radius: 20px;
+  overflow: hidden;
+  transform: scale(0.85);
+  filter: brightness(0.5);
+  transition: transform 0.3s ease-out, filter 0.3s ease-out;
+}
+@media (min-width: 840px) and (max-width: 1439px) {
+  .slider__inner-item {
+    width: 769px;
+    height: 387px;
+  }
+}
+@media (min-width: 375px) and (max-width: 839px) {
+  .slider__inner-item {
+    width: 322px;
+    height: 267px;
+  }
+}
+.slider__inner-item-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.slider__inner-item.active {
+  transform: scale(1);
+  filter: brightness(1);
+}
+
+.buy {
+  margin-top: 150px;
+}
+.buy__step-1 {
+  display: none;
+  flex-direction: row;
+  column-gap: 25px;
+  z-index: 1;
+}
+.buy__step-1.selected {
+  display: flex;
+}
+@media (min-width: 375px) and (max-width: 839px) {
+  .buy__step-1 {
+    position: relative;
+  }
+}
+.buy__step-2 {
+  display: none;
+  column-gap: 85px;
+  flex-direction: row;
+}
+.buy__step-2.selected {
+  display: flex;
+}
+@media (min-width: 375px) and (max-width: 839px) {
+  .buy__step-2 {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+}
+.buy__step-2-cards {
+  display: flex;
+  flex-direction: row;
+  column-gap: 20px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.buy__step-2-cards::-webkit-scrollbar {
+  display: none;
+}
+.buy__step-2-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.buy__step-2-info-inner h2 {
+  color: #FFFFFF;
+  font-family: "Montserrat";
+  font-size: 70px;
+  text-wrap: nowrap;
+  margin-top: 0;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 0.3em;
+}
+@media (min-width: 375px) and (max-width: 839px) {
+  .buy__step-2-info-inner h2 {
+    font-size: 34px;
+  }
+}
+.buy__step-2-info-inner h3 {
+  color: #FFFFFF;
+  font-family: "Montserrat";
+  font-size: 32px;
+  text-wrap: nowrap;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+@media (min-width: 375px) and (max-width: 839px) {
+  .buy__step-2-info-inner h3 {
+    font-size: 22px;
+  }
+}
+.buy__step-2-arrows {
+  display: flex;
+  flex-direction: row;
+  column-gap: 7px;
+}
+.buy__step-2-arrows-btn {
+  padding: 18px 24px !important;
+  margin-top: 0 !important;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+.buy__step-2-arrows-btn:hover {
+  color: #E5BF9B;
+  background-color: #FFFFFF;
+}
+.buy__step-2-card {
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(42px);
+  padding: 20px 60px 40px 40px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+.buy__step-2-card-status {
+  display: flex;
+  flex-direction: row;
+  column-gap: 15px;
+}
+.buy__step-2-card h3 {
+  all: unset;
+  color: #E5BF9B;
+  font-family: "Playfair Display";
+  font-size: 50px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+}
+.buy__step-2-card span {
+  font-family: "Montserrat";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.buy__step-2-card-rooms {
+  color: #FFFFFF;
+}
+.buy__step-2-card-booked {
+  color: yellow;
+}
+.buy__step-2-card img {
+  width: 230px;
+  height: 200px;
+}
+.buy__step-2-card p {
+  width: 280px;
+  color: #949AA5;
+  font-family: "Inter";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%; /* 25.2px */
+}
+.buy__step-2-card button {
+  margin-top: 0 !important;
+  transition: color 0.2s ease-in-out, background-color 0.3s ease-in-out;
+}
+.buy__step-2-card button:hover {
+  color: #E5BF9B;
+  background-color: #FFFFFF;
+}
+.buy__info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 0;
+}
+@media (min-width: 840px) and (max-width: 1439px) {
+  .buy__info {
+    width: 100%;
+  }
+}
+@media (min-width: 375px) and (max-width: 839px) {
+  .buy__info {
+    width: 100%;
+  }
+}
+@media (min-width: 375px) and (max-width: 839px) {
+  .buy__info-mobile {
+    width: 50%;
+  }
+}
+.buy__info h2 {
+  color: #FFFFFF;
+  font-family: "Montserrat";
+  font-size: 70px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 0.3em;
+  margin-top: 0;
+}
+@media (min-width: 375px) and (max-width: 839px) {
+  .buy__info h2 {
+    font-size: 34px;
+  }
+}
+.buy__info h3 {
+  color: #FFFFFF;
+  font-family: "Montserrat";
+  font-size: 32px;
+  text-wrap: nowrap;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+@media (min-width: 375px) and (max-width: 839px) {
+  .buy__info h3 {
+    font-size: 22px;
+  }
+}
+.buy__info select {
+  display: inline-flex;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(22px);
+  color: #FFFFFF;
+  font-family: "Montserrat";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.buy__info option {
+  color: #FFFFFF;
+  font-family: "Montserrat";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.buy button {
+  display: inline-flex;
+  padding: 18px 30px;
+  align-items: flex-start;
+  gap: 10px;
+  transition: color 0.2s ease-in-out;
+}
+.buy button:hover {
+  color: #E5BF9B;
+}
+.buy__steps {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 15px;
+  max-width: 100%;
+  width: 100%;
+}
+.buy__steps span {
+  color: #E5BF9B;
+  font-family: "Montserrat";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-wrap: nowrap;
+}
+.buy__access {
+  display: flex;
+  flex-direction: row;
+  display: flex;
+  margin-top: 10px;
+  column-gap: 26px;
+}
+@media (min-width: 375px) and (max-width: 839px) {
+  .buy__access {
+    flex-direction: column;
+  }
+}
+.buy__access-body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 8px;
+}
+.buy__access-body :first-of-type {
+  color: #E5BF9B;
+  font-feature-settings: "case" on;
+  font-family: "Playfair Display";
+  font-size: 50px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.buy__access-body :last-of-type {
+  color: #FFFFFF;
+  font-family: "Inter";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 21px */
+  text-wrap: nowrap;
+}
+.buy button {
+  width: fit-content;
+  position: relative;
+  display: flex;
+  padding: 18px 30px;
+  align-items: center;
+  gap: 10px;
+  border: 2px solid #E5BF9B;
+  background-color: transparent;
+  margin-top: 55px;
+  color: #FFFFFF;
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px; /* 100% */
+  z-index: 1;
+}
+@media (min-width: 375px) and (max-width: 839px) {
+  .buy button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+@media (min-width: 375px) and (max-width: 839px) {
+  .buy button {
+    margin-top: 140px;
+  }
+}
+.buy__img {
+  width: 70%;
+  clip-path: inset(0px 0px 0px -9999px);
+  position: relative;
+}
+@media (min-width: 1440px) {
+  .buy__img {
+    margin-top: -80px;
+  }
+}
+@media (min-width: 840px) and (max-width: 1439px) {
+  .buy__img {
+    width: 55%;
+  }
+}
+@media (min-width: 375px) and (max-width: 839px) {
+  .buy__img {
+    width: 188px;
+    position: absolute;
+    right: -20px;
+    bottom: 27px;
+  }
+}
+.buy__img-house {
+  position: relative;
+  z-index: 1;
+  width: 780px;
+  height: 926px;
+  flex-shrink: 0;
+}
+@media (min-width: 375px) and (max-width: 839px) {
+  .buy__img-house {
+    width: 421px;
+    height: 500px;
+  }
+}
+.buy__img::after {
+  position: absolute;
+  bottom: 24px;
+  right: -107px;
+  display: flex;
+  z-index: 0;
+  content: " ";
+  background-image: url("./public/index/buy/shadow.svg");
+  background-size: 1434px 205px;
+  height: 205px;
+  width: 1434px;
+}
+@media (min-width: 840px) and (max-width: 1439px) {
+  .buy__img::after {
+    right: -500px;
+  }
+}
+@media (min-width: 375px) and (max-width: 839px) {
+  .buy__img::after {
+    bottom: -40px;
+    right: -726px;
+  }
+}
+
+.infrastructure h2 {
+  color: #FFFFFF;
+  font-family: "Montserrat";
+  font-size: 70px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+@media (min-width: 375px) and (max-width: 839px) {
+  .infrastructure h2 {
+    font-size: 34px;
+  }
+}
+.infrastructure__inner {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 720px);
+  grid-template-rows: repeat(2, 580px);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+@media (min-width: 840px) and (max-width: 1439px) {
+  .infrastructure__inner {
+    grid-template-columns: repeat(2, 417px);
+  }
+}
+@media (min-width: 375px) and (max-width: 839px) {
+  .infrastructure__inner {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.infrastructure__inner-div1 {
+  background-image: url("./public/infrastructure/1.png");
+  grid-area: 1/1/2/2;
+}
+.infrastructure__inner-div2 {
+  background-image: url("./public/infrastructure/2.png");
+  grid-area: 2/1/3/2;
+}
+.infrastructure__inner-div3 {
+  background-image: url("./public/infrastructure/3.png");
+  grid-area: 1/2/2/3;
+}
+.infrastructure__inner-div4 {
+  background-image: url("./public/infrastructure/4.png");
+  grid-area: 2/2/3/3;
+}
+.infrastructure__inner-div {
+  display: flex;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: end;
+  padding-left: 130px;
+  padding-bottom: 77px;
+  row-gap: 20px;
+}
+@media (min-width: 840px) and (max-width: 1439px) {
+  .infrastructure__inner-div {
+    padding-left: 70px;
+  }
+}
+@media (min-width: 375px) and (max-width: 839px) {
+  .infrastructure__inner-div {
+    padding-left: 40px;
+    padding-bottom: 30px;
+    height: 340px;
+  }
+}
+.infrastructure__inner-div span {
+  all: unset;
+  color: #E5BF9B;
+  font-family: "Playfair Display";
+  font-size: 60px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+}
+.infrastructure__inner-div h4 {
+  all: unset;
+  color: #FFFFFF;
+  font-family: "Montserrat";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.infrastructure__inner-div p {
+  all: unset;
+  max-width: 280px;
+  color: #949AA5;
+  font-family: "Inter";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%; /* 25.2px */
+}
+
+.mortgage {
+  color: #FFFFFF;
+}
+.mortgage h2 {
+  color: #FFFFFF;
+  font-family: "Montserrat";
+  font-size: 70px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+@media (min-width: 375px) and (max-width: 839px) {
+  .mortgage h2 {
+    font-size: 34px;
+  }
+}
+.mortgage__options {
+  display: flex;
+  column-gap: 5px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.mortgage__options::-webkit-scrollbar {
+  display: none;
+}
+.mortgage__options > * {
+  flex-shrink: 0;
+}
+.mortgage__option {
+  white-space: nowrap;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  padding: 18px 30px;
+  color: #FFFFFF;
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px; /* 100% */
+}
+.mortgage__option.selected {
+  border: 2px solid #E5BF9B;
+}
+@media (min-width: 375px) and (max-width: 839px) {
+  .mortgage__option {
+    font-size: 14px;
+    padding: 18px 20px;
+  }
+}
+.mortgage__advant-block {
+  display: flex;
+  flex-direction: row;
+  column-gap: 95px;
+}
+@media (min-width: 375px) and (max-width: 839px) {
+  .mortgage__advant-block {
+    flex-direction: column;
+  }
+}
+.mortgage__advant-info {
+  display: flex;
+  flex-direction: column;
+  max-width: 380px;
+  row-gap: 10px;
+}
+.mortgage__advant-info h3 {
+  color: #FFFFFF;
+  font-family: "Montserrat";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: 1.15rem;
+  margin-bottom: 0;
+}
+@media (min-width: 375px) and (max-width: 839px) {
+  .mortgage__advant-info h3 {
+    font-size: 22px;
+  }
+}
+.mortgage__advant-info p {
+  color: #949AA5;
+  font-family: "Inter";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%; /* 25.2px */
+}
+.mortgage__partners {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.mortgage__partners::-webkit-scrollbar {
+  display: none;
+}
+.mortgage__partners h3 {
+  color: #FFFFFF;
+  font-family: "Montserrat";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: 1.15rem;
+  margin-bottom: 10px;
+}
+@media (min-width: 375px) and (max-width: 839px) {
+  .mortgage__partners h3 {
+    font-size: 22px;
+  }
+}
+.mortgage__lead {
+  color: #E5BF9B;
+  text-align: right;
+  font-family: "Inter";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 180%; /* 25.2px */
+  text-wrap: nowrap;
+  cursor: pointer;
+}
+.mortgage table {
+  border: none;
+  font-family: "Inter";
+}
+.mortgage tr:first-of-type {
+  border-bottom: 1px solid #E5BF9B;
+}
+.mortgage tr:nth-of-type(2) {
+  margin-top: 1px;
+}
+.mortgage th {
+  text-align: left;
+  color: #727B8C;
+  font-family: "Inter";
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 18.2px */
+  padding-right: 20px;
+}
+.mortgage td {
+  text-align: left;
+  padding-top: 23px;
+  padding-bottom: 23px;
+}
+@media (min-width: 840px) and (max-width: 1439px) {
+  .mortgage td:nth-of-type(3) {
+    text-wrap: nowrap;
+    padding-right: 20px;
+  }
+}
+.mortgage td.alpha {
+  display: inline-flex;
+  justify-content: start;
+  align-items: center;
+}
+.mortgage td.alpha::before {
+  padding-right: 10px;
+  width: 40px;
+  height: 40px;
+  content: "";
+  background-repeat: no-repeat;
+  background-image: url("./public/mortgage/alpha.svg");
+}
+.mortgage td.sber {
+  display: inline-flex;
+  justify-content: start;
+  align-items: center;
+}
+.mortgage td.sber::before {
+  padding-right: 10px;
+  width: 40px;
+  height: 40px;
+  content: "";
+  background-repeat: no-repeat;
+  background-image: url("./public/mortgage/sber.svg");
+}
+.mortgage td.asia {
+  display: inline-flex;
+  justify-content: start;
+  align-items: center;
+}
+.mortgage td.asia::before {
+  padding-right: 10px;
+  width: 40px;
+  height: 40px;
+  content: "";
+  background-repeat: no-repeat;
+  background-image: url("./public/mortgage/azia.svg");
+}
+.mortgage td.wide {
+  display: inline-flex;
+  justify-content: start;
+  align-items: center;
+}
+.mortgage td.wide::before {
+  padding-right: 10px;
+  width: 40px;
+  height: 40px;
+  content: "";
+  background-repeat: no-repeat;
+  background-image: url("./public/mortgage/otp.svg");
+}
+.mortgage th, .mortgage td {
+  width: 200px;
+}
+.mortgage th:first-of-type, .mortgage td:first-of-type {
+  width: 300px;
+}
+@media (min-width: 840px) and (max-width: 1439px) {
+  .mortgage th:first-of-type, .mortgage td:first-of-type {
+    width: 215px;
+  }
+}
+.mortgage__contact {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  column-gap: 16px;
+}
+@media (min-width: 375px) and (max-width: 839px) {
+  .mortgage__contact {
+    flex-direction: column;
+  }
+}
+.mortgage__contact button {
+  border: 2px solid #FFFFFF;
+  padding: 18px 30px;
+  color: #FFFFFF;
+  background-color: transparent;
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  cursor: pointer;
+}
+@media (min-width: 375px) and (max-width: 839px) {
+  .mortgage__contact button {
+    width: 100%;
+  }
+}
+.mortgage__contact button:hover {
+  color: #E5BF9B;
+  background-color: #FFFFFF;
+}
+.mortgage__contact p {
+  color: #FFFFFF;
+  font-family: "Inter";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6;
+}
+@media (min-width: 375px) and (max-width: 839px) {
+  .mortgage__contact p {
+    text-align: center;
+  }
+}
+
+.location {
+  margin-top: 140px;
+  display: flex;
+  flex-direction: row;
+}
+@media (min-width: 840px) and (max-width: 1439px) {
+  .location {
+    flex-direction: column;
+    margin-top: 70px;
+  }
+}
+@media (min-width: 375px) and (max-width: 839px) {
+  .location {
+    flex-direction: column;
+    margin-top: 70px;
+  }
+}
+.location__body {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+@media (min-width: 840px) and (max-width: 1439px) {
+  .location__body {
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+}
+.location__map {
+  transform: translateY(-50px);
+}
+@media (min-width: 375px) and (max-width: 839px) {
+  .location__map {
+    margin-left: -120px;
+    overflow: hidden;
+    transform: translateY(-10px);
+  }
+}
+.location h2 {
+  color: #FFFFFF;
+  font-family: "Montserrat";
+  font-size: 70px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+@media (min-width: 375px) and (max-width: 839px) {
+  .location h2 {
+    font-size: 34px;
+  }
+}
+.location p {
+  width: 380px;
+  color: #FFFFFF;
+  font-family: "Inter";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%; /* 25.2px */
+  overflow: visible;
+  margin-top: 0;
+}
+.location__nearby {
+  display: grid;
+  grid-template-columns: repeat(2, 0fr);
+  grid-template-rows: repeat(3, 1fr);
+  row-gap: 20px;
+  column-gap: 50px;
+}
+.location__nearby div {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  color: #FFFFFF;
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px; /* 100% */
+}
+.location__nearby-div1 {
+  grid-area: 1/1/2/2;
+}
+.location__nearby-div1::before {
+  margin-right: 10px;
+  content: "";
+  background-image: url("./public/location/park.svg");
+  display: block;
+  width: 54px;
+  height: 54px;
+}
+.location__nearby-div2 {
+  grid-area: 1/2/2/3;
+}
+.location__nearby-div2::before {
+  margin-right: 10px;
+  content: "";
+  background-image: url("./public/location/sport.svg");
+  display: block;
+  width: 54px;
+  height: 54px;
+}
+.location__nearby-div3 {
+  grid-area: 2/1/3/2;
+}
+.location__nearby-div3::before {
+  margin-right: 10px;
+  content: "";
+  background-image: url("./public/location/shop.svg");
+  display: block;
+  width: 54px;
+  height: 54px;
+}
+.location__nearby-div4 {
+  grid-area: 2/2/3/3;
+}
+.location__nearby-div4::before {
+  margin-right: 10px;
+  content: "";
+  background-image: url("./public/location/restaurant.svg");
+  display: block;
+  width: 54px;
+  height: 54px;
+}
+.location__nearby-div5 {
+  grid-area: 3/1/4/2;
+}
+.location__nearby-div5::before {
+  margin-right: 10px;
+  content: "";
+  background-image: url("./public/location/lake.svg");
+  display: block;
+  width: 54px;
+  height: 54px;
+}
+.location__advantages {
+  display: flex;
+  flex-direction: row;
+  column-gap: 50px;
+}
+@media (min-width: 840px) and (max-width: 1439px) {
+  .location__advantages {
+    flex-direction: column;
+    row-gap: 24px;
+  }
+}
+@media (min-width: 375px) and (max-width: 839px) {
+  .location__advantages {
+    display: none;
+  }
+}
+.location__advantages-block-stat-number {
+  color: #E5BF9B;
+  font-family: "Playfair Display";
+  font-size: 60px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+}
+.location__advantages-block-stat-slash {
+  color: #949AA5;
+  font-feature-settings: "case" on;
+  font-family: "Playfair Display";
+  font-size: 60px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+  opacity: 0.2;
+}
+.location__advantages-block-stat-measurment {
+  color: #FFFFFF;
+  font-feature-settings: "case" on;
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px; /* 100% */
+}
+.location__advantages-block-description {
+  color: #949AA5;
+  font-family: "Inter";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  width: auto !important;
+  line-height: 150%; /* 21px */
+}
+
+.contacts h2 {
+  color: #FFFFFF;
+  font-family: "Montserrat";
+  font-size: 70px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+@media (min-width: 375px) and (max-width: 839px) {
+  .contacts h2 {
+    font-size: 34px;
+  }
+}
+.contacts__tops {
+  display: flex;
+  justify-content: space-between;
+}
+@media (min-width: 375px) and (max-width: 839px) {
+  .contacts__tops {
+    flex-direction: column;
+  }
+}
+.contacts__tops-connect {
+  display: flex;
+  flex-direction: row;
+  column-gap: 80px;
+  row-gap: 35px;
+  flex-wrap: wrap;
+}
+@media (min-width: 840px) and (max-width: 1439px) {
+  .contacts__tops-connect {
+    column-gap: 40px;
+  }
+}
+@media (min-width: 840px) and (max-width: 1439px) {
+  .contacts__tops-connect {
+    max-width: 67%;
+  }
+}
+.contacts__tops-contact {
+  color: #FFFFFF;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 12px;
+}
+.contacts__tops-contact:first-of-type::before {
+  display: block;
+  content: "";
+  background-image: url("./public/contacts/phone.svg");
+  width: 42px;
+  height: 42px;
+}
+.contacts__tops-contact:nth-of-type(2)::before {
+  display: block;
+  content: "";
+  background-image: url("./public/contacts/phone.svg");
+  width: 42px;
+  height: 42px;
+}
+.contacts__tops-contact:nth-of-type(3)::before {
+  display: block;
+  content: "";
+  background-image: url("./public/contacts/mail.svg");
+  width: 42px;
+  height: 42px;
+}
+.contacts__tops-contact:last-of-type {
+  justify-self: end;
+}
+@media (min-width: 375px) and (max-width: 839px) {
+  .contacts__tops-contact:last-of-type {
+    justify-self: normal;
+  }
+}
+.contacts__tops-row1 {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+.contacts__tops-row1 p {
+  margin-top: 0;
+  width: 235px;
+  color: #FFFFFF;
+  font-family: "Inter";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%; /* 25.2px */
+}
+.contacts__tops-row2 {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+.contacts__tops-row2 p {
+  margin-top: 0;
+  width: 235px;
+  color: #FFFFFF;
+  font-family: "Inter";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%; /* 25.2px */
+}
+.contacts__tops-row3 {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+.contacts__tops-row3 p {
+  margin-top: 0;
+  width: 235px;
+  color: #FFFFFF;
+  font-family: "Inter";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%; /* 25.2px */
+}
+@media (min-width: 375px) and (max-width: 839px) {
+  .contacts__tops-row3 p {
+    display: none;
+  }
+}
+.contacts__tops-row4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+@media (min-width: 375px) and (max-width: 839px) {
+  .contacts__tops-row4 {
+    display: none;
+  }
+}
+.contacts__tops-row4 p {
+  display: block;
+  color: #E5BF9B;
+  text-align: right;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px; /* 100% */
+  white-space: nowrap;
+}
+.contacts__tops-row4-head {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+  cursor: pointer;
+  transition: color 0.2 ease-in-out;
+}
+.contacts__tops-row4-head:hover {
+  color: #949AA5;
+}
+.contacts__tops-row4-mobile {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.contacts__tops-row4-mobile p {
+  display: block;
+  color: #E5BF9B;
+  text-align: right;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px; /* 100% */
+  white-space: nowrap;
+}
+.contacts__tops-row4-mobile-head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  row-gap: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.contacts__office {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.contacts__office-left {
+  color: #BCC1C9;
+  font-family: "Inter";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%;
+}
+.contacts__office-left b {
+  color: #FFFFFF;
+}
+.contacts__office-right button {
+  border: 2px solid #FFFFFF;
+  padding: 18px 30px;
+  color: #FFFFFF;
+  background-color: transparent;
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+.contacts__office-right button:hover {
+  color: #E5BF9B;
+  background-color: #FFFFFF;
+}
+
+/*# sourceMappingURL=main.css.map */

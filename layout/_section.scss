@@ -1,0 +1,27 @@
+@use "../base/variables" as *;
+
+.section{
+    &__top{
+        
+        position: relative;
+        /* Важно: убедитесь, что у .section__top есть достаточная высота,
+           например, min-height: 100vh; или явная height.
+           Без этого, если внутри нет контента, элемент может быть 0px в высоту,
+           и фон не будет виден. */
+       
+
+        background: 
+           linear-gradient(180deg, rgba(32, 45, 69, 0) 50%, #202D45 100%), linear-gradient(0deg, rgba(32, 45, 69, 0.5) 0%, rgba(32, 45, 69, 0.5) 100%), url("./public/index/header.png") lightgray 47% 4% no-repeat
+    }
+}
+
+body{
+    background: $color-bg;
+   
+}
+
+
+
+html, body {
+  overflow-x: hidden !important;
+}
