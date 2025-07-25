@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./main.css">
-</head>
+    <link rel="preload" href="./main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" as="image" href="./public/index/header.webp">
+    <noscript><link rel="stylesheet" href="./main.css"></noscript>
 <body>
     <div class="section__top">
 
@@ -68,27 +69,27 @@
         <div class="hero__advantages">
             <div class="hero__advantages-block">
                 <div class="hero__advantages-block-stat">
-                    <span class="hero__advantages-block-stat-number">14</span>
-                    <span class="hero__advantages-block-stat-slash">/</span>
-                    <span class="hero__advantages-block-stat-measurment">Минут</span>
+                    <span class="hero__advantages-block-stat--number">14</span>
+                    <span class="hero__advantages-block-stat--slash">/</span>
+                    <span class="hero__advantages-block-stat--measurment">Минут</span>
                 </div>
                 <p class="hero__advantages-block-description">Пешком до метро</br>
 «Тульская»</p>
             </div>
             <div class="hero__advantages-block">
                 <div class="hero__advantages-block-stat">
-                    <span class="hero__advantages-block-stat-number">21</span>
-                    <span class="hero__advantages-block-stat-slash">/</span>
-                    <span class="hero__advantages-block-stat-measurment">Минута</span>
+                    <span class="hero__advantages-block-stat--number">21</span>
+                    <span class="hero__advantages-block-stat--slash">/</span>
+                    <span class="hero__advantages-block-stat--measurment">Минута</span>
                 </div>
                 <p class="hero__advantages-block-description">Пешком до метро </br>
 «Тульская»</p>
             </div>
             <div class="hero__advantages-block">
                 <div class="hero__advantages-block-stat">
-                    <span class="hero__advantages-block-stat-number">100</span>
-                    <span class="hero__advantages-block-stat-slash">/</span>
-                    <span class="hero__advantages-block-stat-measurment">Метров</span>
+                    <span class="hero__advantages-block-stat--number">100</span>
+                    <span class="hero__advantages-block-stat--slash">/</span>
+                    <span class="hero__advantages-block-stat--measurment">Метров</span>
                 </div>
                 <p class="hero__advantages-block-description">До кремля</p>
             </div>
@@ -97,9 +98,10 @@
     </div>
   <section class="advant container">
     <h2>Преимущества</h2>
-    <div class="advant__scroll">
+    <div class="advant__scroll-wrapper">
+        <div class="advant__scroll">
         <div class="advant__scroll-div1 advant__scroll-cell">
-            <img class="advant__scroll-cell-small" src="./public/index/scroll/1.jpg" alt="" >
+            <img class="advant__scroll-cell-small" src="./public/index/scroll/1.webp" alt="" >
             <div class="advant__scroll-cell-body">
              <div class="advant__scroll-cell-body">   <span class="advant__scroll-cell-number">01</span>
             <span class="advant__scroll-cell-description">Индивидуальное 
@@ -109,42 +111,42 @@
             
         </div>
         <div class="advant__scroll-div2 advant__scroll-cell">
-            <img class="advant__scroll-cell-small" src="./public/index/scroll/2.jpg" alt="" >
+            <img class="advant__scroll-cell-small" src="./public/index/scroll/2.webp" alt="" >
             <div class="advant__scroll-cell-body"><span class="advant__scroll-cell-number">02</span>
             <span class="advant__scroll-cell-description">Тёплые 
 полы</span>
 </div>
         </div>
         <div class="advant__scroll-div3 advant__scroll-cell">
-            <img class="advant__scroll-cell-small" src="./public/index/scroll/3.png" alt="" >
+            <img class="advant__scroll-cell-small" src="./public/index/scroll/3.webp" alt="" >
             <div class="advant__scroll-cell-body"><span class="advant__scroll-cell-number">03</span>
             <span class="advant__scroll-cell-description">Панорамное
 остекление лоджий</span>
 </div>
         </div>
         <div class="advant__scroll-div4 advant__scroll-cell">
-            <img class="advant__scroll-cell-small" src="./public/index/scroll/4.png" alt="" >
+            <img class="advant__scroll-cell-small" src="./public/index/scroll/4.webp" alt="" >
             <div class="advant__scroll-cell-body"><span class="advant__scroll-cell-number">04</span>
             <span class="advant__scroll-cell-description">Закрытая 
 территория </span>
 </div>
         </div>
         <div class="advant__scroll-div6 advant__scroll-cell">
-            <img class="advant__scroll-cell-large" src="./public/index/scroll/5.png" alt="">
+            <img class="advant__scroll-cell-large" src="./public/index/scroll/5.webp" alt="">
             <div class="advant__scroll-cell-body"><span class="advant__scroll-cell-number">05</span>
             <span class="advant__scroll-cell-description">Видеонаблюдение придомовой 
 территории и подъезда </span>
             </div>
         </div>
         <div class="advant__scroll-div9 advant__scroll-cell">
-            <img class="advant__scroll-cell-small" src="./public/index/scroll/6.jpg" alt="">
+            <img class="advant__scroll-cell-small" src="./public/index/scroll/6.webp" alt="">
             <div class="advant__scroll-cell-body"><span class="advant__scroll-cell-number">06</span>
             <span class="advant__scroll-cell-description">Умный 
 домофон</span>
             </div>
         </div>
         <div class="advant__scroll-div10 advant__scroll-cell">
-            <img class="advant__scroll-cell-small" src="./public/index/scroll/7.jpg" alt="">
+            <img class="advant__scroll-cell-small" src="./public/index/scroll/7.webp" alt="">
             <div class="advant__scroll-cell-body"><span class="advant__scroll-cell-number">07</span>
             <span class="advant__scroll-cell-description">Черновая 
 отделка</span>
@@ -153,17 +155,18 @@
         </div>
 
     </div>
+    </div>
   </section>
   <section class="slider container">
     <div class="slider__inner">
         <div class="slider__inner-item">
-            <img src="./public/index/slider/3.png" alt="" class="slider__inner-item-img">
+            <img src="./public/index/slider/3.webp" alt="" class="slider__inner-item-img">
         </div>
         <div class="slider__inner-item">
-            <img src="./public/index/slider/1.png" alt="" class="slider__inner-item-img">
+            <img src="./public/index/slider/1.webp" alt="" class="slider__inner-item-img">
         </div>
         <div class="slider__inner-item">
-            <img src="./public/index/slider/2.png" alt="" class="slider__inner-item-img">
+            <img src="./public/index/slider/2.webp" alt="" class="slider__inner-item-img">
         </div>
     </div>
   </section>
@@ -179,32 +182,35 @@
         </div>
 <div class="buy__info-mobile">
     <h3>Выберите этаж</h3>
-<select>
-    <option>1 этаж</option>
-    <option>2 этаж</option>
-    <option>3 этаж</option>
-    <option>4 этаж</option>
-</select>
+    <div class="buy__info-select">
+        <div class="buy__info-select--current">1 Этаж</div>
+        <div class="buy__info-select-list hidden">
+            <div class="buy__info-select-item">1 Этаж</div>
+            <div class="buy__info-select-item">2 Этаж</div>
+            <div class="buy__info-select-item">3 Этаж</div>
+            <div class="buy__info-select-item">4 Этаж</div>
+        </div>
+    </div>
 <div class="buy__access">
     <div class="buy__access-body">
-        <span class="buy__access-count">4</span>
-        <span class="buy__access-sold">Квартиры доступно</br>
+        <span class="buy__access--count">4</span>
+        <span class="buy__access--sold">Квартиры доступно</br>
 на этаже</span>
     </div>
     <div class="buy__access-body">
-        <span class="buy__access-count">2</span>
-        <span class="buy__access-sold">Квартиры</br>
+        <span class="buy__access--count">2</span>
+        <span class="buy__access--sold">Квартиры</br>
 уже продано</span>
     </div>
 </div>
-</div>
 <button data-next class="buy__step-1-btn">Продолжить</button>
+</div>
         
     </div>
     
     
     <div class="buy__img">
-        <img src="./public/index/buy/house.png" alt="" class="buy__img-house">
+        <img src="./public/index/buy/house.webp" alt="" class="buy__img-house">
     </div>
     </div>
 <div class="buy__step buy__step-2">
@@ -268,12 +274,12 @@
   <section class="infrastructure container-full">
     <h2 class="container">Инфраструктура</h2>
     <div class="infrastructure__inner">
-        <div class="infrastructure__inner-div1 infrastructure__inner-div">
+        <div class="infrastructure__inner-div1 infrastructure__inner--div">
             <span>1</span>
             <h4>Библиотека</h4>
             <p>Взрослые деревья, медитативная гладь пруда и деликатно вписанные  в зеленое окружение</p>
         </div>
-        <div class="infrastructure__inner-div2 infrastructure__inner-div">
+        <div class="infrastructure__inner-div2 infrastructure__inner--div">
             <span>2</span>
             <h4>
             Парковка
@@ -282,7 +288,7 @@
                 Взрослые деревья, медитативная гладь пруда и деликатно вписанные  в зеленое окружение
             </p>
         </div>
-        <div class="infrastructure__inner-div3 infrastructure__inner-div">
+        <div class="infrastructure__inner-div3 infrastructure__inner--div">
             <span>3</span>
             <h4>
                 Бассейн
@@ -291,7 +297,7 @@
                 Взрослые деревья, медитативная гладь пруда и деликатно вписанные  в зеленое окружение
             </p>
         </div>
-        <div class="infrastructure__inner-div4 infrastructure__inner-div">
+        <div class="infrastructure__inner-div4 infrastructure__inner--div">
             <span>4</span>
             <h4>
                 Фитнес
@@ -393,20 +399,20 @@
             <div class="location__advantages mobile-hidden">
                 <div class="location__advantages-block">
                     <div class="location__advantages-block-stat">
-                        <span class="location__advantages-block-stat-number">14</span>
-                        <span class="location__advantages-block-stat-slash">/</span>
-                        <span class="location__advantages-block-stat-measurment">Минут</span>
+                        <span class="location__advantages-block-stat--number">14</span>
+                        <span class="location__advantages-block-stat--slash">/</span>
+                        <span class="location__advantages-block-stat--measurment">Минут</span>
                     </div>
-                    <p class="location__advantages-block-description">Пешком до метро</br>
+                    <p class="location__advantages-block--description">Пешком до метро</br>
     «Тульская»</p>
                 </div>
                 <div class="location__advantages-block">
                     <div class="location__advantages-block-stat">
-                        <span class="location__advantages-block-stat-number">21</span>
-                        <span class="location__advantages-block-stat-slash">/</span>
-                        <span class="location__advantages-block-stat-measurment">Минута</span>
+                        <span class="location__advantages-block-stat--number">21</span>
+                        <span class="location__advantages-block-stat--slash">/</span>
+                        <span class="location__advantages-block-stat--measurment">Минута</span>
                     </div>
-                    <p class="location__advantages-block-description">Пешком до метро </br>
+                    <p class="location__advantages-block--description">Пешком до метро </br>
     «Тульская»</p>
                 </div>
                         
@@ -422,38 +428,38 @@
         <div class="contacts__tops">
             <div class="contacts__tops-connect">
                 <div class="contacts__tops-row1">
-                <span class="contacts__tops-contact">+7 (495) 255-48-24</span>
+                <span class="contacts__tops-contact"><a href="tel:+380935322800">+7 (495) 255-48-24</a></span>
                 <p>Отдел продаж. Работаем в будние</br>дни с 9:00 до 18:00</p>
             </div>
             <div class="contacts__tops-row2">
-                <span class="contacts__tops-contact">+7 (495) 255-48-24</span>
+                <span class="contacts__tops-contact"><a href="tel:+380935322800">+7 (495) 255-48-24</a></span>
                 <p>Ипотека. Работаем в будние</br>
 дни с 9:00 до 18:00</p>
             </div>
             <div class="contacts__tops-row3">
-                <span class="contacts__tops-contact">mail@mail.ru</span>
+                <span class="contacts__tops-contact"><a href="mailto:mail@mail.ru">mail@mail.ru</a></span>
                 <p>Пишите нам по вопросам</br>
 партнерстваю</p>
             </div>
             
             </div>
             <div class="contacts__tops-row4">
-                <div class="contacts__tops-row4-head">
+                <div class="contacts__tops-row4--head">
                     <p>Ход строительства</p>
                     <p>Документы</p>
                 </div>
-                <div class="contacts__office-right desktop-hidden">
+                <div class="contacts__office--right desktop-hidden">
                 <button>Напишите нам</button>
             </div> 
             </div>
         </div>
         <div class="contacts__office">
-            <div class="contacts__office-left">
-                <p><b>Головной офис:</b></br>
+            <div class="contacts__office--left">
+               <address><p><b>Головной офис:</b></br>
         Москва, Пресненская набережная, 6с2, башня «Империя»,</br>
-        3-й подъезд, офис 4315</p>
+        3-й подъезд, офис 4315</p></address> 
             </div>
-            <div class="contacts__office-right tablet-mobile-hidden">
+            <div class="contacts__office--right tablet-mobile-hidden">
                 <button>Напишите нам</button>
             </div>    
         </div>
@@ -504,5 +510,7 @@
     </footer>
     <script src="./scripts/script.js"></script>
     <script src="./scripts/slider.js"></script>
+    <script src="./scripts/dropdownbtn.js"></script>
+    <script src="./scripts/dragscript.js"></script>
 </body>
 </html>

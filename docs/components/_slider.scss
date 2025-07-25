@@ -15,31 +15,37 @@
     // Важно: он должен быть ровно такой ширины, чтобы умещался один слайд + часть боковых.
     // Или даже просто один слайд, если сдвигать будем так.
     // Пока оставим без явной ширины тут, разберемся в JS, какой размер лучше.
-    overflow: hidden; // Это важно для обрезки того, что не видно
+    overflow: visible; // Это важно для обрезки того, что не видно
 
     &__inner {
         display: flex;
         // flex-direction: row; // Это уже по умолчанию для flex
         // Расстояние между слайдами
-        column-gap: 20px;column-gap: 20px;
         // Важно: на этом элементе будет применяться transform: translateX для сдвига
         transition: transform 0.3s ease-out; // Плавность для переключения слайдов
-
+        column-gap: 20px;
+        @include tablet{
+            column-gap: 0px;
+        }
+        @include mobile{
+            column-gap: 0px;
+        }
+        
         &-item {
-        flex-shrink: 0; // Слайды не будут сжиматься
-        display: flex; // Центрировать изображение внутри item, если нужно
-        justify-content: center;
-        align-items: center;
-
-        // Эти стили задают размеры для каждого слайда
-        width: 1120px; 
-        height: 563px;
+            flex-shrink: 0; // Слайды не будут сжиматься
+            display: flex; // Центрировать изображение внутри item, если нужно
+            justify-content: center;
+            align-items: center;
+            
+            // Эти стили задают размеры для каждого слайда
+            width: 1148px; 
+            height: 563px;
         @include tablet {
-            width: 769px;
+            width: 700px;
             height: 387px;
         }
         @include mobile {
-            width: 322px;
+            width: 312px;
             height: 267px;
         }
 

@@ -18,16 +18,39 @@ margin-bottom: 70px;
 
     }
     &__scroll{
+        max-width: 100%;
+        &-wrapper{
+             overflow-x: auto;
+        scroll-behavior: smooth;
+        cursor: grab;
+        user-select: none;
+
+        scrollbar-width: none;
+        &::-webkit-scrollbar{
+            display: none;
+        }
+
+        &.active{
+            cursor: grabbing;
+        }
+        }
         display: grid;
         grid-template-columns: min-content min-content min-content min-content min-content;
     
-    grid-template-rows: repeat(2, auto);
-    gap: 8px;
-    overflow-x:visible;
+        grid-template-rows: repeat(2, auto);
+        gap: 8px;
+
+       
     column-gap: 20px;
     row-gap: 20px;
 
     &-cell{
+        img {
+  user-select: none;      /* Запрет выделения */
+  -webkit-user-drag: none; /* Запрет перетаскивания картинки в браузерах на WebKit */
+  user-drag: none;         /* Стандартное свойство для других браузеров */
+  pointer-events: none;    /* (Опционально) чтобы мышь не цеплялась за картинку */
+        }
         display: flex;
         flex-direction: column;
         row-gap: 12px;

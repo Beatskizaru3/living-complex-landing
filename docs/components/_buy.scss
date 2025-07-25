@@ -7,13 +7,50 @@
         display: none;
         flex-direction: row;
         column-gap: 25px;
-        z-index: 1;
+        ;
+        overflow: visible;
         &.selected{
             display: flex;
         }
         @include mobile{
             position: relative;
         }
+        &-btn{
+        width: fit-content;
+        @include mobile{
+            width:100%;
+            justify-content: center;
+        }
+        display: inline-flex;
+        padding: 18px 30px;
+        align-items: flex-start;
+        gap: 10px;
+
+        transition: color 0.2s ease-in-out;
+            &:hover{
+                color: $color-accent;
+            }
+        position: relative;
+        z-index: 0 !important;
+        display: flex;
+        padding: 18px 30px;
+        align-items: center;
+        gap: 10px;
+        border: 2px solid $color-accent;
+        background-color: transparent;
+        margin-top: 55px;
+        @include mobile{
+            margin-top: 140px;
+        }
+
+        color: $color-white;
+        font-family: $font2;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 18px; /* 100% */
+       
+    }
     }
     &__step-2{
         display: none;
@@ -81,7 +118,9 @@
             flex-direction: row;
             column-gap: 7px;
             &-btn{
-                
+                background-color: transparent;
+                border: 1px solid $color-white;
+                color: $color-white;
                 padding: 18px 24px !important;
                 margin-top: 0 !important;
                 transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
@@ -142,6 +181,15 @@
             }
             button{
                 margin-top: 0 !important;
+                border: 1px solid $color-white;
+                color: $color-white;
+                
+        padding: 18px 30px;
+        align-items: flex-start;
+        gap: 10px;
+        font-family: $font2;
+        text-align: center;
+                background-color: transparent;
                 transition: color 0.2s ease-in-out, background-color 0.3s ease-in-out;
             &:hover{
                 color: $color-accent;
@@ -192,42 +240,52 @@
             font-weight: 600;
             line-height: normal;
         }
-        select{
-            display: inline-flex;
-            padding: 20px;
-            justify-content: space-between;
-            align-items: center;
-            border: 1px solid rgba(255, 255, 255, 0.30);
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(22px);
-
-            color: $color-white;
-            font-family: $font2;
-            font-size: 22px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
-        }
-        option{
-            color: $color-white;
-            font-family: $font2;
-            font-size: 22px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
-        }
-    }
-    button{
+       &-select{
+        position: relative;
+        z-index: 2;
         display: inline-flex;
-        padding: 18px 30px;
-        align-items: flex-start;
-        gap: 10px;
-        transition: color 0.2s ease-in-out;
-            &:hover{
-                color: $color-accent;
+        flex-direction: column;
+        width: 200px;
+        font-family: $font2;
+        font-size: 22px;
+        color: $color-white;
+        background-color: $color-bg;
+        border: 1px solid $color-gray;
+        backdrop-filter: blur(22px);
+        cursor: pointer;
+        user-select: none;
+        &--current{
+            padding: 20px;
+        }
+        &-list{
+            position: absolute;
+            top: 100%;
+            z-index: 3;
+            left: -1px;
+            width: 100%;
+            background-color: $color-bg;
+            backdrop-filter: blur(22px);
+            border: 1px solid $color-gray;
+            z-index: 9999;
+            overflow: visible;
+            &.hidden{
+                display: none;
             }
-        
+        }
+        &-item{
+            position: relative;
+            padding: 20px;
+            transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+            color: $color-white;
+            z-index: 9999;
+            &:hover{
+                background-color: beige;
+                color: black;
+            }
+        }
+       }
     }
+   
     &__steps{
         display: flex;
         flex-direction: row;
@@ -283,32 +341,7 @@
         }
     }
 
-    button{
-        width: fit-content;
-        @include mobile{
-            width:100%;
-            justify-content: center;
-        }
-        position: relative;
-        display: flex;
-        padding: 18px 30px;
-        align-items: center;
-        gap: 10px;
-        border: 2px solid $color-accent;
-        background-color: transparent;
-        margin-top: 55px;
-        @include mobile{
-            margin-top: 140px;
-        }
-
-        color: $color-white;
-        font-family: $font2;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 18px; /* 100% */
-        z-index: 1;
-    }
+    
 
     &__img{
         width: 70%;
@@ -327,6 +360,7 @@
         }
         
         position: relative;
+        z-index: -1;
         
         &-house{
             position: relative;
@@ -359,4 +393,11 @@
                 width: 1434px;
 }
     }
+    .buy__step-1,
+.buy__info,
+.buy__info-mobile {
+  overflow: visible;
+  position: relative; // если ещё нет
+  z-index: 0; // нормальный контекст
+}
 }

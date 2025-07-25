@@ -51,6 +51,12 @@
         font-style: normal;
         font-weight: 600;
         line-height: 18px; /* 100% */
+        cursor: pointer;
+        transition: border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+        &:hover{
+            border-color: $color-accent;
+            background-color: $color-gray;
+        }
     }
 
     &__advant{

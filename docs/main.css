@@ -526,7 +526,6 @@ template {
 
 body {
   background: #202D45;
-  overflow-y: scroll;
 }
 
 html, body {
@@ -662,7 +661,7 @@ html, body {
 .hero__advantages-block-stat {
   flex-wrap: nowrap;
 }
-.hero__advantages-block-stat-number {
+.hero__advantages-block-stat--number {
   color: #E5BF9B;
   font-family: "Playfair Display";
   font-size: 60px;
@@ -670,7 +669,7 @@ html, body {
   font-weight: 400;
   line-height: normal;
 }
-.hero__advantages-block-stat-slash {
+.hero__advantages-block-stat--slash {
   color: #949AA5;
   font-feature-settings: "case" on;
   font-family: "Playfair Display";
@@ -680,7 +679,7 @@ html, body {
   line-height: normal;
   opacity: 0.2;
 }
-.hero__advantages-block-stat-measurment {
+.hero__advantages-block-stat--measurment {
   color: #FFFFFF;
   font-feature-settings: "case" on;
   font-family: "Montserrat";
@@ -715,18 +714,37 @@ html, body {
   }
 }
 .advant__scroll {
+  max-width: 100%;
   display: grid;
   grid-template-columns: min-content min-content min-content min-content min-content;
   grid-template-rows: repeat(2, auto);
   gap: 8px;
-  overflow-x: visible;
   column-gap: 20px;
   row-gap: 20px;
+}
+.advant__scroll-wrapper {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  cursor: grab;
+  user-select: none;
+  scrollbar-width: none;
+}
+.advant__scroll-wrapper::-webkit-scrollbar {
+  display: none;
+}
+.advant__scroll-wrapper.active {
+  cursor: grabbing;
 }
 .advant__scroll-cell {
   display: flex;
   flex-direction: column;
   row-gap: 12px;
+}
+.advant__scroll-cell img {
+  user-select: none; /* Запрет выделения */
+  -webkit-user-drag: none; /* Запрет перетаскивания картинки в браузерах на WebKit */
+  user-drag: none; /* Стандартное свойство для других браузеров */
+  pointer-events: none; /* (Опционально) чтобы мышь не цеплялась за картинку */
 }
 .advant__scroll-cell-body {
   display: flex;
@@ -808,20 +826,29 @@ html, body {
 
 .slider {
   margin-top: 100px;
-  overflow: hidden;
+  overflow: visible;
 }
 .slider__inner {
   display: flex;
-  column-gap: 20px;
-  column-gap: 20px;
   transition: transform 0.3s ease-out;
+  column-gap: 20px;
+}
+@media (min-width: 840px) and (max-width: 1439px) {
+  .slider__inner {
+    column-gap: 0px;
+  }
+}
+@media (min-width: 375px) and (max-width: 839px) {
+  .slider__inner {
+    column-gap: 0px;
+  }
 }
 .slider__inner-item {
   flex-shrink: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 1120px;
+  width: 1148px;
   height: 563px;
   border-radius: 20px;
   overflow: hidden;
@@ -831,13 +858,13 @@ html, body {
 }
 @media (min-width: 840px) and (max-width: 1439px) {
   .slider__inner-item {
-    width: 769px;
+    width: 700px;
     height: 387px;
   }
 }
 @media (min-width: 375px) and (max-width: 839px) {
   .slider__inner-item {
-    width: 322px;
+    width: 312px;
     height: 267px;
   }
 }
@@ -858,7 +885,7 @@ html, body {
   display: none;
   flex-direction: row;
   column-gap: 25px;
-  z-index: 1;
+  overflow: visible;
 }
 .buy__step-1.selected {
   display: flex;
@@ -866,6 +893,43 @@ html, body {
 @media (min-width: 375px) and (max-width: 839px) {
   .buy__step-1 {
     position: relative;
+  }
+}
+.buy__step-1-btn {
+  width: fit-content;
+  display: inline-flex;
+  padding: 18px 30px;
+  align-items: flex-start;
+  gap: 10px;
+  transition: color 0.2s ease-in-out;
+  position: relative;
+  z-index: 0 !important;
+  display: flex;
+  padding: 18px 30px;
+  align-items: center;
+  gap: 10px;
+  border: 2px solid #E5BF9B;
+  background-color: transparent;
+  margin-top: 55px;
+  color: #FFFFFF;
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px; /* 100% */
+}
+@media (min-width: 375px) and (max-width: 839px) {
+  .buy__step-1-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+.buy__step-1-btn:hover {
+  color: #E5BF9B;
+}
+@media (min-width: 375px) and (max-width: 839px) {
+  .buy__step-1-btn {
+    margin-top: 140px;
   }
 }
 .buy__step-2 {
@@ -935,6 +999,9 @@ html, body {
   column-gap: 7px;
 }
 .buy__step-2-arrows-btn {
+  background-color: transparent;
+  border: 1px solid #FFFFFF;
+  color: #FFFFFF;
   padding: 18px 24px !important;
   margin-top: 0 !important;
   transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
@@ -994,6 +1061,14 @@ html, body {
 }
 .buy__step-2-card button {
   margin-top: 0 !important;
+  border: 1px solid #FFFFFF;
+  color: #FFFFFF;
+  padding: 18px 30px;
+  align-items: flex-start;
+  gap: 10px;
+  font-family: "Montserrat";
+  text-align: center;
+  background-color: transparent;
   transition: color 0.2s ease-in-out, background-color 0.3s ease-in-out;
 }
 .buy__step-2-card button:hover {
@@ -1050,38 +1125,49 @@ html, body {
     font-size: 22px;
   }
 }
-.buy__info select {
+.buy__info-select {
+  position: relative;
+  z-index: 2;
   display: inline-flex;
-  padding: 20px;
-  justify-content: space-between;
-  align-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  background: rgba(255, 255, 255, 0.05);
+  flex-direction: column;
+  width: 200px;
+  font-family: "Montserrat";
+  font-size: 22px;
+  color: #FFFFFF;
+  background-color: #202D45;
+  border: 1px solid #949AA5;
   backdrop-filter: blur(22px);
+  cursor: pointer;
+  user-select: none;
+}
+.buy__info-select--current {
+  padding: 20px;
+}
+.buy__info-select-list {
+  position: absolute;
+  top: 100%;
+  z-index: 3;
+  left: -1px;
+  width: 100%;
+  background-color: #202D45;
+  backdrop-filter: blur(22px);
+  border: 1px solid #949AA5;
+  z-index: 9999;
+  overflow: visible;
+}
+.buy__info-select-list.hidden {
+  display: none;
+}
+.buy__info-select-item {
+  position: relative;
+  padding: 20px;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
   color: #FFFFFF;
-  font-family: "Montserrat";
-  font-size: 22px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
+  z-index: 9999;
 }
-.buy__info option {
-  color: #FFFFFF;
-  font-family: "Montserrat";
-  font-size: 22px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-}
-.buy button {
-  display: inline-flex;
-  padding: 18px 30px;
-  align-items: flex-start;
-  gap: 10px;
-  transition: color 0.2s ease-in-out;
-}
-.buy button:hover {
-  color: #E5BF9B;
+.buy__info-select-item:hover {
+  background-color: beige;
+  color: black;
 }
 .buy__steps {
   display: flex;
@@ -1137,39 +1223,11 @@ html, body {
   line-height: 150%; /* 21px */
   text-wrap: nowrap;
 }
-.buy button {
-  width: fit-content;
-  position: relative;
-  display: flex;
-  padding: 18px 30px;
-  align-items: center;
-  gap: 10px;
-  border: 2px solid #E5BF9B;
-  background-color: transparent;
-  margin-top: 55px;
-  color: #FFFFFF;
-  font-family: "Montserrat";
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 18px; /* 100% */
-  z-index: 1;
-}
-@media (min-width: 375px) and (max-width: 839px) {
-  .buy button {
-    width: 100%;
-    justify-content: center;
-  }
-}
-@media (min-width: 375px) and (max-width: 839px) {
-  .buy button {
-    margin-top: 140px;
-  }
-}
 .buy__img {
   width: 70%;
   clip-path: inset(0px 0px 0px -9999px);
   position: relative;
+  z-index: -1;
 }
 @media (min-width: 1440px) {
   .buy__img {
@@ -1225,6 +1283,13 @@ html, body {
     right: -726px;
   }
 }
+.buy .buy__step-1,
+.buy .buy__info,
+.buy .buy__info-mobile {
+  overflow: visible;
+  position: relative;
+  z-index: 0;
+}
 
 .infrastructure h2 {
   color: #FFFFFF;
@@ -1260,22 +1325,22 @@ html, body {
   }
 }
 .infrastructure__inner-div1 {
-  background-image: url("./public/infrastructure/1.png");
+  background-image: url("./public/infrastructure/1.webp");
   grid-area: 1/1/2/2;
 }
 .infrastructure__inner-div2 {
-  background-image: url("./public/infrastructure/2.png");
+  background-image: url("./public/infrastructure/2.webp");
   grid-area: 2/1/3/2;
 }
 .infrastructure__inner-div3 {
-  background-image: url("./public/infrastructure/3.png");
+  background-image: url("./public/infrastructure/3.webp");
   grid-area: 1/2/2/3;
 }
 .infrastructure__inner-div4 {
-  background-image: url("./public/infrastructure/4.png");
+  background-image: url("./public/infrastructure/4.webp");
   grid-area: 2/2/3/3;
 }
-.infrastructure__inner-div {
+.infrastructure__inner--div {
   display: flex;
   flex-direction: column;
   background-repeat: no-repeat;
@@ -1286,18 +1351,18 @@ html, body {
   row-gap: 20px;
 }
 @media (min-width: 840px) and (max-width: 1439px) {
-  .infrastructure__inner-div {
+  .infrastructure__inner--div {
     padding-left: 70px;
   }
 }
 @media (min-width: 375px) and (max-width: 839px) {
-  .infrastructure__inner-div {
+  .infrastructure__inner--div {
     padding-left: 40px;
     padding-bottom: 30px;
     height: 340px;
   }
 }
-.infrastructure__inner-div span {
+.infrastructure__inner--div span {
   all: unset;
   color: #E5BF9B;
   font-family: "Playfair Display";
@@ -1306,7 +1371,7 @@ html, body {
   font-weight: 400;
   line-height: normal;
 }
-.infrastructure__inner-div h4 {
+.infrastructure__inner--div h4 {
   all: unset;
   color: #FFFFFF;
   font-family: "Montserrat";
@@ -1315,7 +1380,7 @@ html, body {
   font-weight: 600;
   line-height: normal;
 }
-.infrastructure__inner-div p {
+.infrastructure__inner--div p {
   all: unset;
   max-width: 280px;
   color: #949AA5;
@@ -1366,6 +1431,8 @@ html, body {
   font-style: normal;
   font-weight: 600;
   line-height: 18px; /* 100% */
+  cursor: pointer;
+  transition: border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 .mortgage__option.selected {
   border: 2px solid #E5BF9B;
@@ -1375,6 +1442,10 @@ html, body {
     font-size: 14px;
     padding: 18px 20px;
   }
+}
+.mortgage__option:hover {
+  border-color: #E5BF9B;
+  background-color: #949AA5;
 }
 .mortgage__advant-block {
   display: flex;
@@ -1746,7 +1817,7 @@ html, body {
     display: none;
   }
 }
-.location__advantages-block-stat-number {
+.location__advantages-block-stat--number {
   color: #E5BF9B;
   font-family: "Playfair Display";
   font-size: 60px;
@@ -1754,7 +1825,7 @@ html, body {
   font-weight: 400;
   line-height: normal;
 }
-.location__advantages-block-stat-slash {
+.location__advantages-block-stat--slash {
   color: #949AA5;
   font-feature-settings: "case" on;
   font-family: "Playfair Display";
@@ -1764,7 +1835,7 @@ html, body {
   line-height: normal;
   opacity: 0.2;
 }
-.location__advantages-block-stat-measurment {
+.location__advantages-block-stat--measurment {
   color: #FFFFFF;
   font-feature-settings: "case" on;
   font-family: "Montserrat";
@@ -1773,7 +1844,7 @@ html, body {
   font-weight: 600;
   line-height: 18px; /* 100% */
 }
-.location__advantages-block-description {
+.location__advantages-block--description {
   color: #949AA5;
   font-family: "Inter";
   font-size: 14px;
@@ -1834,6 +1905,15 @@ html, body {
   flex-direction: row;
   align-items: center;
   column-gap: 12px;
+}
+.contacts__tops-contact a {
+  all: unset;
+  color: #FFFFFF;
+}
+@media (min-width: 375px) and (max-width: 839px) {
+  .contacts__tops-contact a {
+    display: none;
+  }
 }
 .contacts__tops-contact:first-of-type::before {
   display: block;
@@ -1938,7 +2018,7 @@ html, body {
   line-height: 18px; /* 100% */
   white-space: nowrap;
 }
-.contacts__tops-row4-head {
+.contacts__tops-row4--head {
   display: flex;
   flex-direction: column;
   row-gap: 10px;
@@ -1947,7 +2027,7 @@ html, body {
   cursor: pointer;
   transition: color 0.2 ease-in-out;
 }
-.contacts__tops-row4-head:hover {
+.contacts__tops-row4--head:hover {
   color: #949AA5;
 }
 .contacts__tops-row4-mobile {
@@ -1984,7 +2064,7 @@ html, body {
   justify-content: space-between;
   align-items: center;
 }
-.contacts__office-left {
+.contacts__office--left {
   color: #BCC1C9;
   font-family: "Inter";
   font-size: 18px;
@@ -1992,10 +2072,10 @@ html, body {
   font-weight: 400;
   line-height: 180%;
 }
-.contacts__office-left b {
+.contacts__office--left b {
   color: #FFFFFF;
 }
-.contacts__office-right button {
+.contacts__office--right button {
   border: 2px solid #FFFFFF;
   padding: 18px 30px;
   color: #FFFFFF;
@@ -2008,7 +2088,7 @@ html, body {
   cursor: pointer;
   transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
-.contacts__office-right button:hover {
+.contacts__office--right button:hover {
   color: #E5BF9B;
   background-color: #FFFFFF;
 }

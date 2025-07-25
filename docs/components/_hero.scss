@@ -111,7 +111,7 @@ padding-bottom: 200px;
             }
             &-stat{
                 flex-wrap: nowrap;
-                &-number{
+                &--number{
                     color: $color-accent;
                     font-family: $font1;
                     font-size: 60px;
@@ -120,7 +120,7 @@ padding-bottom: 200px;
                     line-height: normal;
                     
                 }
-                &-slash{
+                &--slash{
                     color: #949AA5;
                     font-feature-settings: 'case' on;
                     font-family: $font1;
@@ -130,7 +130,7 @@ padding-bottom: 200px;
                     line-height: normal;
                     opacity: 0.2;
                 }
-                &-measurment{
+                &--measurment{
                     color: $color-white;
                     
                     font-feature-settings: 'case' on;

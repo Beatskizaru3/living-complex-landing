@@ -1,4 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
+  function adjustColumnGap(){
+    if (window.innerWidth >= 840 && window.innerWidth < 1440){
+      return 0;
+    } else if (window.innerWidth > 1440){
+      return 20;
+    } else {
+      return 0;
+    }
+  }
+
+  function adjustTransform(){
+    if (window.innerWidth >= 840 && window.innerWidth < 1440){
+       return 35;
+     } else if (window.innerWidth > 1440){
+       return 16;
+     }  else {
+      return 30;
+     }
+  }
+  window.addEventListener('resize', adjustColumnGap);
   const sliderInner = document.querySelector('.slider__inner');
   let sliderItems = Array.from(document.querySelectorAll('.slider__inner-item'));
   const numClones = 2;
@@ -21,12 +41,16 @@ document.addEventListener('DOMContentLoaded', () => {
   // 2. Инициализация
   sliderItems = Array.from(document.querySelectorAll('.slider__inner-item'));
   let currentIndex = numClones;
-  const sliderItemWidth = sliderItems[0].offsetWidth + 20;
+  columnGap = adjustColumnGap();
+  const sliderItemWidth = sliderItems[0].offsetWidth + columnGap;
   let isDragging = false, startX = 0, prevTranslate = 0, currentTranslate = 0;
 
   function setPosition() {
-    sliderInner.style.transform = `translateX(${-currentIndex * sliderItemWidth}px)`;
+    adjustTrans = adjustTransform() 
+    sliderInner.style.transform = `translateX(${(-currentIndex * sliderItemWidth) + adjustTrans}px)`;
+    console.log(sliderInner.style.transform);
   }
+  
   function updateActive() {
     sliderItems.forEach((it, i) => {
       it.classList.toggle('active', i === currentIndex);
